@@ -2,7 +2,7 @@
 name: 'NCC Action demo'
 description: 'Simple demo to replicate issue'
 runs:
-  using: node16
+  using: node12
   main: index.js
 outputs:
   public-ip:
