@@ -3,7 +3,7 @@ name: 'NCC Action demo'
 description: 'Simple demo to replicate issue'
 runs:
   using: node16
-  main: dist/index.js
+  main: index.js
 outputs:
   public-ip:
     description: 'The public IP of the runner'
