@@ -1,12 +1,11 @@
 const core = require("@actions/core");
-const { HttpClient, HttpCodes } = require("@actions/http-client");
+const fetch = require("node-fetch");
 
 (async () => {
-  const client = new HttpClient();
-  const { message, readBody } = await client.get("https://checkip.amazonaws.com");
-  if (message.statusCode !== HttpCodes.OK) {
-    throw new Error(message.statusMessage);
+  const res = await fetch("https://checkip.amazonaws.com");
+  if (res.status !== 200) {
+    throw new Error(res.statusText);
   }
-  const ip = await readBody();
+  const ip = await res.text();
   core.setOutput("public-ip", ip);
 })();

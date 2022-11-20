@@ -22,6 +22,6 @@
   "homepage": "https://github.com/textbook/ncc-action-demo#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/http-client": "^2.0.1"
+    "node-fetch": "^2.6.7"
   }
 }
