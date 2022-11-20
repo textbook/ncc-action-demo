@@ -9,3 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
+        id: ip
+      - run: echo ${{ steps.ip.outputs.public-ip }}
