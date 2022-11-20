@@ -23,7 +23,7 @@
   "homepage": "https://github.com/textbook/ncc-action-demo#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/http-client": "^2.0.1"
+    "@actions/http-client": "^1.0.11"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.34.0"
