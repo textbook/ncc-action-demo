@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: node index.js
       - uses: ./
         id: ip
       - run: echo ${{ steps.ip.outputs.public-ip }}
