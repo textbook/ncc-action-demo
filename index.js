@@ -1,11 +1,11 @@
 const core = require("@actions/core");
-const { HttpClient, HttpCodes } = require("@actions/http-client");
+const http = require("@actions/http-client");
 
-const client = new HttpClient();
+const client = new http.HttpClient();
 
 (async () => {
   const { message, readBody } = await client.get("https://checkip.amazonaws.com");
-  if (message.statusCode !== HttpCodes.OK) {
+  if (message.statusCode !== http.HttpCodes.OK) {
     throw new Error(message.statusMessage);
   }
   const ip = await readBody();
